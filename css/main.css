@@ -1,0 +1,1543 @@
+/* css reset */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address,
+blockquote,
+input {
+	
+	margin: 0px ;
+	padding: 0px ;
+	font-size: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Document styles */
+
+
+html {
+
+}
+
+body {
+	
+	background-image:url(../images/background.png);
+	background-repeat:no-repeat;
+	background-size: cover;
+	background-position:center;
+	background-attachment: fixed;
+	
+	margin: 0px ;
+	padding: 0px ;
+	width: 100%;
+	min-width:1000px;
+	font-size: 17px;
+	color: #666 ;
+	line-height: 22px;
+	position: relative;
+	overflow: auto;
+	
+}
+
+
+
+
+
+
+a {
+	color: #39F;
+	text-decoration: none;
+	cursor: pointer;
+	
+	transition:color 1s;
+	-moz-transition:color 1s; /* Firefox 4 */
+	-webkit-transition:color 1s; /* Safari and Chrome */
+	-o-transition:color 1s; /* Opera */
+}
+
+img {
+	border: none;
+}
+
+p.formErrorMessage {
+	margin-left:5px;
+	font-size:14px;
+	color:#FF0000;
+	
+}
+
+p.inlineFormErrorMessage {
+	display:inline;
+	margin-left:5px;
+	font-size:14px;
+	color:#FF0000;
+}
+
+p.formHint {
+	margin-left:5px;
+	font-size:14px;
+	color: #999;
+}
+
+.button {
+	cursor:pointer;
+}
+
+a:hover { color: #0033FF }
+
+
+a.button {
+	color: #FFF;
+	text-decoration: none;
+	cursor: pointer;
+
+}
+
+a.button:hover {
+	color: #FFF;
+}
+
+
+span a.button {
+	border-radius:3px ;
+	background-color: #999;
+	color: #FFF;
+	cursor: pointer;
+	border:none;
+	margin: 3px;
+	min-widht: auto;
+	padding:5px 15px;
+	
+	
+	transition:background-color .5s;
+	-moz-transition:background-color .5s; /* Firefox 4 */
+	-webkit-transition:background-color .5s; /* Safari and Chrome */
+	-o-transition:background-color .5s; /* Opera */
+	
+}
+*html span a.button {
+	padding-top:5px;
+	height:28px;
+	margin-top:-2px;
+}
+
+
+span a.button:hover {
+	background-color: #33F;
+}
+
+
+
+
+
+button {
+	background-color: #33F;
+	color: #FFF;
+	cursor: pointer;
+	border:none;
+	margin: 2px;
+	widht: auto;
+	height:auto;
+	padding:5px 15px;
+}
+
+button.browsePageTab {
+	
+	background-color: #849FFF;
+	font-size: 20px;
+	color: #FFF;
+	min-width: 348px;
+	height: 60px ;
+	margin-top:0px;
+	
+	
+	box-shadow:1px 1px 4px darkgray;
+	
+}
+button#browseTab1Button {
+	margin-left:-20px;
+	border-top-left-radius: 25px ;
+	border-top-right-radius: 5px ;
+	
+}
+*html button#browseTab2Button { /* for IE 6+ */
+	width: 350px;
+}
+
+button.browsePageCurrentTab {
+	
+	position: static;
+	background-color: #33F;
+	font-size: 20px;
+	color: #FFF;
+	min-width: 348px;
+	height: 60px ;
+	cursor:auto;
+	margin-top:0px;
+	
+	
+	box-shadow:1px 1px 4px darkgray;
+	
+	
+}
+button#browseTab2Button {
+	margin-right:-20px;
+	
+	border-top-right-radius: 25px ;
+	border-top-left-radius: 5px ;
+	
+}
+*html button#browseTab2Button { /* for IE 6+ */
+	width: 350px;
+	margin-right:-50px;
+}
+
+div#browsePageMainContent{
+	width:700px;
+	min-width:700px;
+	max-width:700px;
+	position:absolute;
+	left: 50%;
+    margin-left: -354px;
+	margin-top:50px;
+	padding:0px;
+	
+}
+
+
+div#browseTabToContentConectorBar {
+	min-height:15px;
+	height:15px;
+	background-color:#33F;
+	margin-top:-2px;
+	width:100%;
+	min-width:100%;
+	max-width:100%;
+	position: inherit;
+	margin-top:-4px;
+	
+	
+}
+*html div#browseTabToContentConectorBar { /* for IE 6+ */
+    margin-top:-40px;
+}
+
+
+div.browsePageSubContent{
+	top:0px;
+	margin-top:-4px;
+	text-align:left;
+	padding:50px;
+	margin-left:1px;
+	margin-right:1px;
+	background-color: #E2E2E2;
+	border-radius:0 0 25 25px;
+	
+	
+	box-shadow:1px 1px 4px darkgray;
+}
+*html div.browsePageSubContent{ /* for IE 6+ */
+	padding-top:40px;
+	padding-bottom:40px;
+	margin-left:0px;
+	margin-right:0px;
+}
+
+
+div#createNewQuestion {
+
+	width:250px;
+	position:relative;
+	top:4px;
+	float:right;
+		
+}
+*html div#createNewQuestion {
+	top:-15px;		
+}
+
+
+.activeSubcat {
+	display: auto ;	
+}
+
+.inactiveSubcat {
+	display: none ;
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { font-weight: bold ; cursor: default }
+
+h1 { font-size: 200% ; padding:20px; line-height:normal; }
+
+h2 { font-size: 180% ; padding:18px; line-height:normal; }
+
+h3 { font-size: 160% ; padding:16px; line-height:normal; }
+
+h4 { font-size: 140% ; padding:14px; line-height:normal;  }
+
+h5 { font-size: 120% ; padding:12px; line-height:normal;  }
+
+h6 { font-size: 100% ; padding:10px; line-height:normal;  }
+
+textarea {
+	vertical-align: top;
+	
+	width: 350px ;
+	height: 100px ;
+	max-width: 500px;
+	max-height: 250px;
+	min-width: 200px ;
+	min-height: 42px ;
+	
+	border-radius: 4px;
+	border-width: 1px ;
+	border-color: #999;
+	border-style: inset;
+	
+	padding:6px;
+	
+	margin: 3px ;
+	
+	font-family: Verdana, Geneva, sans-serif ;
+	font-size: 80%;
+	
+}
+
+textarea:focus {
+	border-color: #36F;
+	border-style:solid;
+	border-width:2px;
+}
+
+textarea.step {
+	width: 550px ;
+	min-width: 550px ;
+	max-width: 550px ;
+	height: 100px ;
+}
+
+textarea.introduction, textarea.additionalInfo {
+	width: 550px ;
+	min-width: 550px ;
+	max-width: 550px ;
+	height: 60px ;
+}
+
+
+textarea.hint, textarea.comment {
+	width: 250px ;
+	height: 55px ;
+}
+
+textarea.discussion {
+	width: 300px ;
+	height: 70px ;
+}
+
+
+input {
+	font-size: 90%;
+	height: 26px;
+	
+	border-radius: 4px;
+	border-width: 1px ;
+	border-color: #999;
+	
+	padding-left: 4px ;
+	padding-right: 4px ;
+	
+	margin-right: 0;
+}
+*html input { /* IE */
+	padding-left:5px;
+	padding-top:3px;
+}
+
+input:focus {
+	border-color: #36F;
+	border-style:solid;
+}
+
+
+input.login {
+	border-style:solid ;
+	border-color: #CCC;
+	width:150px ;
+	margin-left: 0;
+	margin-right: 0;
+	color: #CCC;
+	
+}
+
+
+input.login:hover, input.login:focus {
+	border-color: #36F;
+	background-color: #FFF;
+	color:#666666 ;
+	
+}
+
+input.button {
+	height:26px ;
+  	min-width: 60px;
+	
+	font-weight:bold;
+	color:#FFFFFF;
+	
+	background-color:#0033FF;
+	
+	margin-left: 0;
+	vertical-align:auto;
+	padding-left:15px;
+	padding-right:15px;
+	
+	border-width: 0;
+		
+	cursor: pointer;
+	
+	
+	transition:background-color .5s;
+	-moz-transition:background-color .5s; /* Firefox 4 */
+	-webkit-transition:background-color .5s; /* Safari and Chrome */
+	-o-transition:background-color .5s; /* Opera */
+	
+}
+*html input.button {
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:0px;
+}
+
+input.button#login {
+	font-weight: normal;
+	background-color: #999;
+}
+
+input.button#login:hover {
+	background-color: #0033FF;
+}
+
+input.button:hover {
+	background-color: #39F;
+	
+}
+
+input.button#searchButton {
+	height: 30px;
+}
+
+input#searchBox {
+	height: 30px;
+	width: 350px;
+	
+	border-style: solid;
+	border-color: #36F;
+}
+
+
+input#quickSearchBox {
+	width: 250px;
+	border-style: solid;
+	border-color: #36F;
+	color: #666;
+}
+
+
+input[type="hidden"] {
+	display: none;
+}
+
+select {
+	font-size: 90%;
+	height: 26px;
+	
+	border-radius: 4px;
+	border-width: 1px ;
+	border-color: #999;
+	
+	vertical-align: top;
+	
+	margin-right: 0;
+}
+
+select:focus {
+	border-color: #36F;
+}
+
+b { font-weight: bold }
+
+
+
+div#footer {
+	 /* */
+	float:left;
+	width:100% ;
+	bottom:0;
+	margin:0 ;
+	margin-top:150px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	background-color: #F2F2F2;
+	font-size:12px;
+	text-align:center;
+	height: 50px;
+	color: #CCC;
+}
+*html div#footer {
+	float:left;
+	margin-top:150px;
+}
+
+
+div#footer a {
+	text-decoration:none;
+	color: #666;
+}
+
+div#footer a:hover {
+	color: #333;
+}
+
+div#header {
+	position:fixed;
+	background-color: #F2F2F2;
+	top:0;
+	padding:0px;
+	padding-bottom: 10px;
+	min-width:1200px;
+	width:100%;
+	margin:0;
+	display:block;
+	height: 60px;
+	min-height:60px;
+	z-index:1;
+	
+	box-shadow:0px 0px 10px #F2F2F2;
+	
+}
+*html div#header { /*  IE  */
+	position:absolute;
+	background:none;
+	width:98%;
+}
+
+
+
+div#headerSearchBox { /* */
+	position: absolute;
+	top:5px;
+	
+	min-width:370px;
+	min-height:30px;
+	text-align:right;
+	padding:10px;
+	
+    left: 50%;
+    margin-left: -250px;
+	
+	z-index:2;
+}
+*html div#headerSearchBox { /*  IE  */
+	width:430px;
+}
+
+
+
+div#headerUserContent { /*  */
+	width:400px;
+	min-width:350px;
+	position: absolute;
+	top:5px;
+	right:5px;
+	text-align:right;
+	padding:14 10 0 14px;
+	z-index:2;
+	
+	
+}
+*html div#headerUserContent {
+	margin-right:-32px;
+	width:400px;
+	right:10px;
+}
+
+div#headerUserContent p { /*  */
+	vertical-align:super;
+	display:inline;
+	color: #999;
+	padding-bottom:8px;
+}
+div#headerUserContent img {
+	height:32px;
+	max-height:32px;
+	margin-left:-3px;
+}
+
+
+
+div#headerGuestContent { /* */
+	height: auto;
+	min-width:380px;
+	position: absolute;
+	top:0px;
+	right:1px;
+	text-align:right;
+	padding:10px;
+	padding-top:12px;
+	margin-bottom:10px;
+	z-index:2;
+}
+*html div#headerGuestContent {
+	margin-right:-22px;
+	width:400px;
+}
+
+
+div#headerGuestContent a { /*  */
+	color:#33F ;
+	font-size:12px;
+}
+
+
+div#headerGuestContent a:hover { /*  */
+	color: #30C ;
+}
+
+div#headerGuestContent p { /*  */
+	padding:5px;
+	color: #CCC ;
+	font-size:12px;
+}
+
+span#allByCategoryFixedTab {
+	position: fixed;
+	top:0px;
+	left:58px;
+	z-index:2;
+}
+span#homeFixedTab {
+	position: fixed;
+	top:0px;
+	left:25px;
+	z-index:2;
+}
+*html span#homeFixedTab {
+	position:absolute;
+}
+span#homeFixedTab a{
+	padding:12 7 2 7px;
+}
+*html span#allByCategoryFixedTab {
+	position:absolute;
+	top:0px;
+	left:60px;
+}
+*html span#homeFixedTab a{
+	padding:4 8 8 8px;
+}
+div#mainContent {
+	text-align:center;
+	height: 650px; /* IE */
+	min-height:700px;
+	position: relative;
+	top:100px;
+	
+	
+}
+
+
+div#followUs {
+	
+	border: hidden;
+	background: #E0E0E0;
+	display:block;
+	border-radius:10px 0 0 10px;
+	
+	position: fixed;
+	top:43%;
+	right: 0;
+	
+	padding:4px;
+	height:auto;
+	width:32px;
+	
+	opacity:.7;
+	
+	
+	transition:width 1s;
+	-moz-transition:width 1s; /* Firefox 4 */
+	-webkit-transition:width 1s; /* Safari and Chrome */
+	-o-transition:width 1s; /* Opera */
+	
+	
+}
+*html div#followUs {
+	display:none;
+	margin-right: 0px;
+	padding-bottom:0px;
+	
+}
+
+
+
+div#followUs:hover {
+	width:40px;
+	opacity:1;
+}
+
+div#followUs img {	
+	border: none;
+}
+
+div#logo {
+	height:175px;
+	position:relative;
+	padding:25px;
+	padding-bottom:50px;
+}
+
+
+div#searchForm {
+	position:relative;
+}
+
+div#indexPageContentBox {
+	float:left ;
+	width: 800px;
+    text-align: left;
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    margin-left: -400px;
+	padding-top:50px;
+}
+
+
+div#topUsersBox {
+	float:left;
+	text-align:left;
+	width:320px;
+}
+
+div#unansweredQuestionsBox {
+	float:right;
+	text-align:left;
+	width:460px;
+}
+
+div#unansweredQuestionsBox li, div#topUsersBox li {
+	list-style: none
+}
+	
+
+div.instructionUnit {
+	float:left ;
+	width: 700px;
+    text-align: left;
+    position: relative;
+    left: 50%;
+    margin-left: -350px;
+}
+
+div.instructionUnitQuestion {
+	text-align: left;
+}
+div.instructionUnitQuestion h4, div.instructionUnitQuestion h5 {
+	padding:5 30 10 15px;
+	color: #666;
+}
+
+div.instructionUnitNumberOfResults {
+    text-align: left;
+}
+div.instructionUnitNumberOfResults h6 {
+	padding:0 30 10 35px;
+	color: #CCC;	
+}
+
+div.instructionUnitAddNewPlan a{
+	
+	background: #F08;
+	padding:5 20px;
+	color:#FFF;
+	border-radius:5 5 0 0px;
+	position:fixed;
+	font-weight:bold;
+	left: 50%;
+	bottom:0px;
+	margin-left:170px;
+	
+	
+	transition:padding .5s;
+	-moz-transition:padding .5s; /* Firefox 4 */
+	-webkit-transition:padding .5s; /* Safari and Chrome */
+	-o-transition:padding .5s; /* Opera */
+}
+*html div.instructionUnitAddNewPlan a{
+	position:absolute;
+}
+div.instructionUnitAddNewPlan a:hover{
+	background: #F09;
+	color:#FFF;
+	padding-bottom:10px;
+}
+*html div.instructionUnitAddNewPlan a:hover{
+	padding:6 20px;
+}
+div.instructionUnitHeader {
+	height:50px ; /* IE */
+	min-height:50px ;
+	background-color: #33F;
+	border-radius: 15 15 0 0px;
+	width:100%;
+	
+	box-shadow:1px 1px 4px darkgray;
+}
+
+div.instructionUnitTitle {
+	width: 500px;
+	color:#FFFFFF ;
+	padding-left:5px;
+}
+*html div.instructionUnitTitle {
+	margin-bottom:-25px;
+}
+
+div.instructionUnitTitle a {
+	color:#FFF;
+}
+div.instructionUnitTitle a hover{
+	color:#FFF;
+}
+
+
+div.instructionUnitVoteing {
+	position:relative;
+	bottom:-20px;
+	right:25px;
+	padding:5px;
+	font-size:12px;
+	float:right;
+	color:#FFFFFF;
+	text-align:right;	
+	
+	transition:background-color .5s;
+	-moz-transition:background-color .5s; /* Firefox 4 */
+	-webkit-transition:background-color .5s; /* Safari and Chrome */
+	-o-transition:background-color .5s; /* Opera */
+}
+*html div.instructionUnitVoteing {
+	top:20px;
+}
+
+span.instructionVoteCount {
+	color:#666666;
+	font-size:12px;
+}
+
+div.instructionUnitMenu {
+	padding:0 25 10 35px;
+	font-size:12px;
+}
+div.instructionUnitMenu a{
+	background-color:#FFFFFF;
+	padding:3 10 4 10px;
+	border-radius:0 0 5 5px;
+	
+	transition:background-color .5s;
+	-moz-transition:background-color .5s; /* Firefox 4 */
+	-webkit-transition:background-color .5s; /* Safari and Chrome */
+	-o-transition:background-color .5s; /* Opera */
+}
+div.instructionUnitMenu a:hover{
+	background-color: #33F;
+	color:#FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+div.instructionUnitContent {
+	width: 100%;
+	background: #E9E9E9;
+	color:#333333;
+	padding-bottom:1px;
+	border-bottom-left-radius:20px;
+	border-bottom-right-radius:20px;
+	margin-bottom:20px;
+	
+	box-shadow:1px 1px 4px darkgray;
+}
+
+div.instructionUnitContent h5{
+	padding-left:30px;
+}
+
+div.instructionUnitContent h6{
+	padding-left:50px;
+}
+
+div.instructionUnitEdit {
+	display:none;
+}
+
+div.instructionUnitSummery {
+	margin-top:10px;
+	width:100%;
+	
+}
+
+div.instructionUnitSummery p{
+	padding:20 30px;
+	
+}
+
+div.instructionUnitSteps {
+	margin:0 30 10 30px;
+	
+}
+
+p.stepnumber {
+	color: #FFF;
+	cursor:default;
+	margin:10 10 2 0px;
+	display: inline;
+	font-weight:bold;
+	font-size:30px;
+}
+
+
+p.instructionUnitStep {
+	display: inline;
+	line-height:30px;
+}
+
+p.continueSteps {
+	line-height:10px;
+	font-weight:bold;
+	font-size:20px;
+	color:#666666;
+	margin-left:48%;
+	margin-bottom:30px;
+	margin-top:0px;
+	cursor:pointer;
+	max-width:10px;
+	min-width:10px;
+	padding-left:20px;
+	padding-right:15px;
+}
+*html p.continueSteps {
+	margin-left:44%;
+	width:20px;
+	height:35px;
+}
+p.continueSteps:hover{
+	color:#03F;
+}
+
+div.instructionUnitDisucssions {
+	background:#FFF ;
+	width:80%;
+	border-radius:10px;
+	margin-left:5%;
+	margin-top:4%;
+	margin-bottom:-3%;
+	padding:1% 5% 2% 5%;
+}
+*html div.instructionUnitDisucssions {
+	width:80%;
+	margin:6% -20% 5% 5%;
+}
+
+div.instructionUnitAdditionalInfo {
+	width:100%;
+	
+}
+
+div.instructionUnitAdditionalInfo p{
+	padding:20 30px;
+	
+}
+
+
+
+div.instructionUnitHints {
+	margin:0 30 10 30px;
+	border-radius:10px;
+	padding:2%;
+	
+}
+
+div.instructionUnitHints ul{
+	list-style:url(../images/icon_hint.png)
+	
+}
+
+#addNewHint { 
+	display:none;
+}
+
+
+div.instructionUnitShowHideComments {
+	margin:-20 0 0 0px;
+	float:right;
+	font-size:12px;
+}
+*html div.instructionUnitShowHideComments {
+	margin:-55 0 0 0px;
+}
+div.instructionUnitShowHideComments a{
+	background-color:#FFFFFF;
+	padding:4 10 4 10px;
+	border-radius:5 0 0 0px;
+}
+div.instructionUnitShowHideComments a:hover{
+	background-color: #33F;
+	color:#FFFFFF;
+}
+
+
+div.instructionUnitComments {
+	background:#FFF ;
+	width:84%;
+	border-radius:10px;
+	margin:5%;
+	margin-top:6%;
+	padding:2% 3% 1% 3%;
+}
+*html div.instructionUnitComments {
+	width:90%;
+	margin:2% -5% 5% 5% ;
+	padding:5%;
+}
+*html div.instructionUnitComments ul {
+	margin-left:0;
+}
+
+
+div.instructionUnitComments ul {
+	padding-left:2%;
+}
+
+
+div.instructionUnitCloudtag {
+	display:none;
+	background: #F00;
+	width:80%;
+	float:left;
+	
+}
+
+
+
+
+
+/* Create, Edit, Save as instruction page /////////////////////////////////////////////////*/
+
+
+div.editPlanPageContentBox {
+	position:relative;
+	width: 1000px;
+    text-align: left;
+    top: 100px;
+    left: 50%;
+    margin-left: -500px;
+	padding-top:20px;
+}
+*html div.editPlanPageContentBox {
+	left: 15%;
+}
+
+
+div.editPlanMainContent {
+	position:relative;
+	background: #E2E2E2;
+	float:left ;
+	width: 625px;
+	min-width: 625px;
+	max-width: 625px;
+	direction:ltr;
+    text-align: left;
+	padding:0px;
+	margin:0px;
+	margin-bottom:100px;
+	
+	border-radius:25px;
+	
+	box-shadow:1px 1px 4px darkgray;
+}
+*html div.editPlanMainContent {
+	width: 625px;
+}
+
+
+div.similarPlans {
+	background: #E2E2E2;
+	float:right ;
+	width: 350px;
+	direction:ltr;
+    text-align: left;
+	border-radius:25px;
+	padding-bottom:30px;
+	box-shadow:1px 1px 4px darkgray;
+}
+div.similarPlansHeader {
+	background-color: #CCC;
+	border-radius:25 25 0 0;
+	color:#FFFFFF;
+	text-align:center;
+	
+}
+
+
+iframe.similarPlansIframe {
+	height:600px;
+	min-height:90%;
+	max-height:90%;
+	width:320px;
+	min-width:320px;
+	max-width:320px;
+	border: none;
+	padding:0 0 0 30px;
+}
+*html iframe.similarPlansIframe {
+	height:600px;
+	width:350px;
+	padding-right:25px;
+
+}
+
+iframe.similarPlansIframe dt,dd {
+	line-height:17px;
+	font-size:12px;
+	margin-left:15px;
+	margin-right:-30px;
+}
+*html iframe.similarPlansIframe dt,dd {
+	margin-right:0px;
+}
+iframe.similarPlansIframe dd,dt {
+	font-size:14px;
+	font-weight:bold;
+}
+dt.similarInstructionShowAllSteps {
+	line-height:25px;
+	font-size:13px;
+	cursor:pointer;
+}
+
+
+
+body.similarPlansIframe {
+	background:none;
+	width:250px;
+	min-width:250px;
+	max-width:250px;
+}
+
+div.editPlanQuestion {
+	background:#3333FF;
+	margin:0px;
+	color:#FFFFFF;
+	padding-left:15px;
+	padding-right:15px;
+	border-radius:25 25 0 0px;
+}
+
+form.editPlan  {
+	padding:20 35 25 35px;
+	
+}
+
+form.editPlan input {
+	margin-left:4px;
+}
+
+form.editPlan input[type="text"]{
+	width:250px;
+}
+
+form.editPlan textarea.hint{
+	width:350px;
+}
+
+
+form.editPlan p.fieldTitle{
+	padding-left:5px;
+	font-weight:bold;
+	font-size:16px;
+	
+}
+
+p.inlineFieldTitle{
+	display:inline;
+	padding-left:5px;
+	font-weight:bold;
+	font-size:16px;
+	
+}
+
+div.editPlanSubmenu a {
+	background:#999;
+	padding:4 12px;
+	font-weight:normal;
+	font-size:12px;
+	color:#FFF;
+	border-radius:0 0 5 5px;
+	margin-left:4px;
+	margin-top:-20px;
+	margin-right:-4px;
+}
+
+div.editPlanSubmenu a:hover {
+	background: #03F ;
+}
+
+div.footerPositionHandeler {
+	display:none;
+}
+*html div.footerPositionHandeler {
+	display: block;
+	height:70px;
+}
+
+
+
+
+
+
+/* Creatt, Edit account page /////////////////////////////////////////////////*/
+
+
+div.createAccountPagePageContentBox {
+	position:relative;
+	background: #E2E2E2;
+	float:left ;
+	width: 710px;
+	min-width: 710px;
+	max-width: 710px;
+    text-align: left;
+    top: 50px;
+    left: 50%;
+    margin-left: -355px;
+	border-radius:25px;
+	box-shadow:1px 1px 4px darkgray;
+}
+*html div.createAccountPagePageContentBox {
+	left: 50%;
+}
+
+
+div.createAccountPageMainContentLeft {
+	position:relative;
+	float:left;
+	width: 350px;
+	min-width: 350px;
+	max-width: 350px;
+	direction:ltr;
+    text-align: left;
+	padding:0px;
+	margin:0px;
+}
+*html div.createAccountPageMainContentLeft {
+	width: 350px;
+}
+
+div.createAccountPageMainContentRight {
+	position:relative;
+	float:right;
+	width: 320px;
+	min-width: 320px;
+	max-width: 320px;
+	direction:ltr;
+    text-align: left;
+	padding:0px;
+	margin:0px;
+}
+*html div.createAccountPageMainContentRight {
+	width: 335px;
+}
+
+
+
+
+div.createAccountPageTitle {
+	background:#3333FF;
+	margin:0px;
+	color:#FFFFFF;
+	padding-left:25px;
+	padding-right:15px;
+	border-radius:25 25 0 0px;
+}
+
+form.createAccountPage  {
+	padding:0 45 35 45px;
+	
+}
+*html form.createAccountPage  {
+	padding-bottom:0px;
+}
+
+form.createAccountPage input {
+	margin-left:4px;
+}
+
+form.createAccountPage input[type="text"]{
+	width:250px;
+}
+
+form.createAccountPage textarea.hint{
+	width:350px;
+}
+
+
+form.createAccountPage p.fieldTitle{
+	padding-left:5px;
+	font-weight:bold;
+	font-size:16px;
+	
+}
+
+
+
+/* Simple pages /////////////////////////////////////////////////*/
+
+
+div.simplePageContentBox {
+	position:relative;
+	width: 700px;
+    text-align: left;
+    top: 50px;
+    left: 50%;
+    margin-left: -350px;
+	padding-top:20px;
+}
+*html div.simplePageContentBox {
+	left: 12%;
+}
+
+
+div.simplePageMainContent {
+	position:relative;
+	background: #E2E2E2;
+	float:left ;
+	width: 700px;
+	min-width: 700px;
+	max-width: 700px;
+	
+	height:350ox;
+	min-height:350px;
+	
+	direction:ltr;
+    text-align: left;
+	padding:0px;
+	margin:0px;
+	margin-bottom:50px;
+	
+	border-radius:25px;
+	
+	box-shadow:1px 1px 4px darkgray;
+}
+*html div.simplePageMainContent {
+	width: 700px;
+}
+
+
+
+
+div.simplePageTitle {
+	background:#3333FF;
+	margin:0px;
+	color:#FFFFFF;
+	padding-left:15px;
+	padding-right:15px;
+	border-radius:25 25 0 0px;
+}
+
+p.simplePageParagraph {
+	
+	padding:50px;
+}
+
+p.simplePageMessage {
+	
+	padding:100px;
+}
+
+
+form.simplePage  {
+	padding:30 45 25 45px;
+}
+*html form.simplePage {
+	padding-top:10;
+}
+form.simplePage input {
+	margin-left:4px;
+}
+
+form.simplePage input[type="text"]{
+	width:200px;
+}
+
+form.simplePage p.fieldTitle{
+	padding-left:5px;
+	font-weight:bold;
+	font-size:16px;
+	
+}
+
+div.simplePageSubmenu a:hover {
+	background: #03F ;
+}
+
+/* Profile page ////////////////////////////////////////////*/
+
+div.userActivity {
+	display:none;
+	float:right;
+	margin-right:30px;
+	margin-top:30px;
+}
+div.userProfileImage {
+	margin-left:40px ;
+	margin-top:40px;
+	float:left;
+	
+}
+div.userContactInfo {
+	margin-left:30px ;
+	margin-top:85px;
+	float:left;
+	
+}
+
+div.userAnsweredQuestions {
+	width:100%;
+	float:left;
+	padding:30px;
+}
+
+div.userAnsweredQuestions dl {
+	
+	margin:10 40 30 40px;
+}
+div.userAnsweredQuestions dt {
+	font-size:18px;
+}
+
+/* Site map page ///////////////////////////////////////*/
+
+ul.siteMap {
+	list-style-type:square ;
+	font-size:17px;
+	padding:40 50 40 100px;
+}
+
+
+/* Search results page ///////////////////////////////////////*/
+
+div.searchResults {
+	padding:30 30 30 45px;
+}
+
+ul.searchResults {
+	list-style-type:square ;
+	font-size:17px;
+	padding:0 30px;
+	list-style:outside;
+}
+*html ul.searchResults {
+	padding:10 0 0 0px;
+}
+
+
+/* Reset account password page ///////////////////////////////////////*/
+
+
+form.resetPasswordAccount {
+	text-align:left;
+	padding:50 70px;
+}
+
+form.resetPasswordAccount p.fieldTitle{
+	font-weight:bold;
+	font-size:16px;
+	display:inline;
+}
+
+
+
+
+#pageCover{
+	
+	display:none;
+	
+	position:absolute;
+	
+	left:0;
+	top:0;
+	
+	width:100%;
+	min-width:100%;
+	max-width:100%;
+	
+	height:1000%;
+	min-height:1000%;
+	max-height:1000%;
+	
+	/* background:url(../images/pageCover.png); */
+	
+	z-index:3;
+}
+
+#loginMessage {
+	position:absolute;
+	/* top:50%;  jQuery calculate vertical position ( IE Does not support fixed position ) */
+	left:50%;
+	margin-top: -60px;
+	margin-left: -225px;
+	background-color:#FFFFFF;
+	border-radius:15px;
+	vertical-align:middle;
+	width:450px;
+	min-width:450px;
+	max-width:450px;
+	
+	height:120px;
+	min-height:120px;
+	
+	box-shadow:4px 4px 5px #000000;
+	
+}
+
+#loginMessage p {
+	padding:37 50 55 50px;	
+}
+
+#closeMessageBox {
+	float:right;
+	padding:5px;
+	cursor:pointer;
+}
+
+
+form#changeAccountPassword  {
+	padding:45 45 25 45px;
+}
