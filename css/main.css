@@ -67,8 +67,7 @@ img {
 p.formErrorMessage {
 	margin-left:5px;
 	font-size:14px;
-	color:#FF0000;
-	
+	color: #FF0000;
 }
 
 p.inlineFormErrorMessage {
@@ -237,8 +236,6 @@ div.browsePageSubContent{
 	margin-right:1px;
 	background-color: #E2E2E2;
 	border-radius:0 0 25 25px;
-	
-	
 	box-shadow:1px 1px 4px darkgray;
 }
 *html div.browsePageSubContent{ /* for IE 6+ */
@@ -250,17 +247,15 @@ div.browsePageSubContent{
 
 
 div#createNewQuestion {
-
 	width:250px;
 	position:relative;
 	top:4px;
 	float:right;
-		
 }
+
 *html div#createNewQuestion {
 	top:-15px;		
 }
-
 
 .activeSubcat {
 	display: auto ;	
@@ -269,8 +264,6 @@ div#createNewQuestion {
 .inactiveSubcat {
 	display: none ;
 }
-
-
 
 h1,
 h2,
@@ -293,7 +286,6 @@ h6 { font-size: 100% ; padding:10px; line-height:normal;  }
 
 textarea {
 	vertical-align: top;
-	
 	width: 350px ;
 	height: 100px ;
 	max-width: 500px;
@@ -307,12 +299,9 @@ textarea {
 	border-style: inset;
 	
 	padding:6px;
-	
 	margin: 3px ;
-	
 	font-family: Verdana, Geneva, sans-serif ;
 	font-size: 80%;
-	
 }
 
 textarea:focus {
@@ -378,7 +367,6 @@ input.login {
 	margin-left: 0;
 	margin-right: 0;
 	color: #CCC;
-	
 }
 
 
@@ -386,33 +374,24 @@ input.login:hover, input.login:focus {
 	border-color: #36F;
 	background-color: #FFF;
 	color:#666666 ;
-	
 }
 
 input.button {
 	height:26px ;
   	min-width: 60px;
-	
 	font-weight:bold;
 	color:#FFFFFF;
-	
 	background-color:#0033FF;
-	
 	margin-left: 0;
 	vertical-align:auto;
 	padding-left:15px;
 	padding-right:15px;
-	
 	border-width: 0;
-		
 	cursor: pointer;
-	
-	
 	transition:background-color .5s;
 	-moz-transition:background-color .5s; /* Firefox 4 */
 	-webkit-transition:background-color .5s; /* Safari and Chrome */
 	-o-transition:background-color .5s; /* Opera */
-	
 }
 *html input.button {
 	padding-left:5px;
@@ -462,13 +441,10 @@ input[type="hidden"] {
 select {
 	font-size: 90%;
 	height: 26px;
-	
 	border-radius: 4px;
 	border-width: 1px ;
 	border-color: #999;
-	
 	vertical-align: top;
-	
 	margin-right: 0;
 }
 
@@ -481,7 +457,6 @@ b { font-weight: bold }
 
 
 div#footer {
-	 /* */
 	float:left;
 	width:100% ;
 	bottom:0;
@@ -525,35 +500,29 @@ div#header {
 	z-index:1;
 	
 	box-shadow:0px 0px 10px #F2F2F2;
-	
 }
+
 *html div#header { /*  IE  */
 	position:absolute;
 	background:none;
 	width:98%;
 }
 
-
-
 div#headerSearchBox { /* */
 	position: absolute;
 	top:5px;
-	
 	min-width:370px;
 	min-height:30px;
 	text-align:right;
 	padding:10px;
-	
     left: 50%;
     margin-left: -250px;
-	
 	z-index:2;
 }
+
 *html div#headerSearchBox { /*  IE  */
 	width:430px;
 }
-
-
 
 div#headerUserContent { /*  */
 	width:400px;
@@ -564,9 +533,8 @@ div#headerUserContent { /*  */
 	text-align:right;
 	padding:14 10 0 14px;
 	z-index:2;
-	
-	
 }
+
 *html div#headerUserContent {
 	margin-right:-32px;
 	width:400px;
@@ -585,8 +553,6 @@ div#headerUserContent img {
 	margin-left:-3px;
 }
 
-
-
 div#headerGuestContent { /* */
 	height: auto;
 	min-width:380px;
@@ -599,17 +565,16 @@ div#headerGuestContent { /* */
 	margin-bottom:10px;
 	z-index:2;
 }
+
 *html div#headerGuestContent {
 	margin-right:-22px;
 	width:400px;
 }
 
-
 div#headerGuestContent a { /*  */
 	color:#33F ;
 	font-size:12px;
 }
-
 
 div#headerGuestContent a:hover { /*  */
 	color: #30C ;
@@ -627,70 +592,62 @@ span#allByCategoryFixedTab {
 	left:58px;
 	z-index:2;
 }
+
 span#homeFixedTab {
 	position: fixed;
 	top:0px;
 	left:25px;
 	z-index:2;
 }
+
 *html span#homeFixedTab {
 	position:absolute;
 }
+
 span#homeFixedTab a{
 	padding:12 7 2 7px;
 }
+
 *html span#allByCategoryFixedTab {
 	position:absolute;
 	top:0px;
 	left:60px;
 }
+
 *html span#homeFixedTab a{
 	padding:4 8 8 8px;
 }
+
 div#mainContent {
 	text-align:center;
 	height: 650px; /* IE */
 	min-height:700px;
 	position: relative;
 	top:100px;
-	
-	
 }
 
-
 div#followUs {
-	
 	border: hidden;
 	background: #E0E0E0;
 	display:block;
 	border-radius:10px 0 0 10px;
-	
 	position: fixed;
 	top:43%;
 	right: 0;
-	
 	padding:4px;
 	height:auto;
 	width:32px;
-	
 	opacity:.7;
-	
-	
 	transition:width 1s;
 	-moz-transition:width 1s; /* Firefox 4 */
 	-webkit-transition:width 1s; /* Safari and Chrome */
 	-o-transition:width 1s; /* Opera */
-	
-	
 }
 *html div#followUs {
 	display:none;
 	margin-right: 0px;
 	padding-bottom:0px;
-	
 }
-
-
 
 div#followUs:hover {
 	width:40px;
@@ -707,7 +664,6 @@ div#logo {
 	padding:25px;
 	padding-bottom:50px;
 }
-
 
 div#searchForm {
 	position:relative;
