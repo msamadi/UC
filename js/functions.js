@@ -39,6 +39,36 @@ $('.basic').hover(function(){
     $('#sortable1 div').attr('class','anything');
 });
 
+function getParameterByName(name)
+{
+  name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+  var regexS = "[\\?&]" + name + "=([^&#]*)";
+  var regex = new RegExp(regexS);
+  var results = regex.exec(window.location.search);
+  if(results == null)
+    return "";
+  else
+    return decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+$(function() {
+    $.ajax({
+        type: "GET",
+        url: "data.php?action=list_queries",
+        dataType: "json",
+        success: function(data) {
+            var options = $("#queries");
+            $.each(data, function() {
+                options.append($("<option />").val(this.query_id).text(this.query_id + ". " + this.category.replace("&amp;", "&") + " - " + this.query));
+            });
+            $("#queries").val(getParameterByName("query_id"));
+        }
+    });
+    $("#queries").change(function(e) { 
+        window.location = "./?query_id=" + $(this).val();
+    });
+});
+
 $(function() {
     $("#add").click(function() {
         $("#toggle").slideToggle("slow");

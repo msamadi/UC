@@ -76,7 +76,7 @@
 				</form>
 			</div>
 		</div>
-        <div id="main"><div class="title" id="maintitle"><h2>How to become a healthy person?</h2></div>
+        <div id="main"><div class="title" id="maintitle"><h2><select id="queries"></select></h2></div>
         	<div class="contdiv">
              <div class="basic">
                 <ol class="sortable" id="sortable1" >
