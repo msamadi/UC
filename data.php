@@ -1,6 +1,6 @@
 <?php
     try {
-        switch ($_GET["action"]) {
+        switch ($_POST["action"]) {
             case "list_queries":
                 $fh = fopen("files/queries.json", "r");
                 $response = "";
@@ -19,17 +19,15 @@
                 //echo file_get_contents("files/queries.json");
                 break;
             case "read_query":
-                $filename = "files/" . intval($_GET["query_id"]) . ".json";
+                $filename = "files/" . intval($_POST["query_id"]) . ".json";
                 if (file_exists($filename))
                     echo file_get_contents($filename);
                 else
                     echo "{ \"success\": false, \"message\": \"No such query.\"}";
                 break;
             case "write_query":
-                $json = $_GET["content"];
-                $content = json_decode($json,true);
-                $fh = fopen("files/" . $content['query_id'] . ".json","w");
-                fwrite($fh, $json);
+                $fh = fopen("files/" . $_POST['query_id'] . ".json","w");
+                fwrite($fh, $_POST["content"]);
                 fclose($fh);
                 echo "{ \"success\": true }";
                 break;

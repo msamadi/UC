@@ -13,6 +13,7 @@
 <script src="js/jquery.ui.sortable.js"></script>
 <script src="js/jquery.collapser.js" type="text/javascript"></script>
 <script src="js/nestedSortable.js" type="text/javascript"></script>
+<script src="js/util-functions.js" type="text/javascript"></script>
 <link rel="stylesheet" type="text/css" href="css/pagestyle.css" >
 </head>
 
@@ -76,14 +77,9 @@
 				</form>
 			</div>
 		</div>
-        <div id="main"><div class="title" id="maintitle"><h2><select id="queries"></select></h2></div>
+        <div id="main"><div class="title" id="maintitle"><h2><select id="queries"></select>&nbsp;<a style="color: white" href="#" onclick="save_query(query_id)">Save</a>&nbsp;<a style="color: white" href="#" onclick="load_query(query_id)">Load</a></h2></div>
         	<div class="contdiv">
-             <div class="basic">
-                <ol class="sortable" id="sortable1" >
-                </ol>
-                 <div class="clear"></div>
-             </div>
-	     
+             <div class="basic"><ol class="sortable" id="sortable1" ></ol><div class="clear"></div></div>
              <div id="step">
              <span style="float:left"></span><b></b>
 			 
@@ -123,4 +119,5 @@
 </div>
 </body>
 <script src="js/functions.js"></script>
+<script src="js/data.js"></script>
 </html>
