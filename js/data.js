@@ -29,6 +29,14 @@ function load_query(query_id) {
                 $(".basic").html(data.steps.replace(/\\\"/g,"\""));
                 $("#tranc").html(data.layers.replace(/\\\"/g,"\""));
             }
+			//// Create by Vahid
+			 $('#tranc h3').each(function(index) {
+			var myString=$(this).attr("id");
+			 var mySplitResult = myString.split("h");
+			 session_id=mySplitResult[1];
+			 
+			 
+        });
         }
     });
 }

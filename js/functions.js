@@ -1,6 +1,7 @@
 /* Globals */
 var query_id = 0;
-
+//Edited by Vahid
+var session_id=0;
 
 
 var count = 1;
@@ -15,7 +16,7 @@ $(document).ready(function(){
     });
 });
 //End of Hide and Show the Similar Plans in right side
-var session_id;		//To save updated $_SESSION['id']
+		//To save updated $_SESSION['id']
 
 $("#step").hide();
 $('#selectpre').hide();
@@ -73,14 +74,15 @@ $(function() {
         $('#add').hide();
     });
 });
-/* ajax */
+/* ajax*/
+//Create by Vahid
 $(function() {
     $("#addtranc").click(function() {
+		var ss="";
         var mytranc = new Array();
         var myid = new Array();
         var mystyle = new Array();
         var myclass = new Array();
-
         $('#tranc h3').each(function(index) {
             mytranc[index] = $(this).text();
         });
@@ -89,22 +91,39 @@ $(function() {
             mystyle[index] = $(this).attr("style");
             myclass[index] = $(this).attr("class");
         });
-
+          if(session_id==0){
+        	set_session(1);
+			ss="<div><input type='checkbox' checked='checked' style='float:left'  onclick='aaa("+session_id+")' id='"+session_id+"'/>&nbsp;&nbsp;";
+			ss=ss+"<h3 style='display:inline' id='h"+session_id+"'>"+$("#titletxt").val()+" </h3>";
+			ss=ss+'&nbsp;&nbsp;<a href="#" onclick="$(this).parent().remove()">remove</a></div>';
+		}else{
+			session_id=session_id+1;
+			var su = 1;
+			$.each(myid,function(name,value){
+			 ss=ss+'<div><input type="checkbox" checked="checked" class="'+myclass[name]+'" onclick="aaa('+value+')" style="'+mystyle[name]+'" id="'+value+'" />';
+			   ss=ss+'&nbsp;&nbsp;<h3 style="display:inline" id="h'+value+'">'+mytranc[name]+'</h3>&nbsp;&nbsp;<a href="#" onclick="$(this).parent().remove()">remove</a><br />';
+			  	
+			   if($("#pre").is(':checked')){
+				   var id="h"+value;
+				   if(($("#selectpre").val())==id){
+					 ss=ss+'<input type="checkbox" checked="checked" class="'+value+'" onclick="aaa('+session_id+')" style="float:left;margin-left:20px" id="'+session_id+'" /><h3 id="h'+session_id+'">'+$("#titletxt").val()+'</h3>';
+					 su=0;  
+				   }else{su = 1;}
+			   }
+			});
+			if(su==1){
+			ss=ss+"<br /><input type='checkbox' checked='checked' style='float:left' onclick='aaa("+session_id+")' id='"+session_id+"'/>&nbsp;&nbsp;";
+			ss=ss+"<h3 style='display:inline' id='h"+session_id+"'>"+$("#titletxt").val()+" </h3>";
+			ss=ss+'&nbsp;&nbsp;<a href="#" onclick="$(this).parent().remove()">remove</a></div>';	
+			}
+		}
         var dataString = $("#form1").serialize() + "&mytranc=" + mytranc + "&myid=" + myid+ "&mystyle=" + mystyle+ "&myclass=" + myclass;
-        $.ajax({
-            type: "POST",
-            url: "tranc.php",
-            data: dataString,
-            success: function(data) {
-                if(data != ""){
-                    $('#tranc').html(data);
+		
+                    $('#tranc').html(ss);
                     $("#toggle").hide();
                     $('#selectpre option').remove();
-                    $('#step span').html("<br />");
+                   $('#step span').html("<br />");
                     $("#step").fadeIn(1500, function() {});
-                }
-            }
-        });
         $('#titletxt').val("");
         return false;
     });
@@ -115,14 +134,8 @@ $("#addstep").click(function() {
     // validate and process form here
     var mytext = $('#step b').text();
     var dataString = $("#form2").serialize();
-    $.ajax({
-        type: "POST",
-        url: "step.php/"+ mytext ,
-        data: dataString,
-        success: function(html) {
-            $(".sortable").append(html);
-        }
-    });
+		var h= "<li class="+session_id+"><div>"+$("#ins1").val()+"</div></li>";
+            $(".sortable").append(h);
     $('#ins1').val("");
     return false;
 });
