@@ -14,6 +14,8 @@
 <script src="js/jquery.collapser.js" type="text/javascript"></script>
 <script src="js/nestedSortable.js" type="text/javascript"></script>
 <script src="js/util-functions.js" type="text/javascript"></script>
+<script src="js/jquery.jeditable.js"  	type="text/javascript"></script>
+
 <link rel="stylesheet" type="text/css" href="css/pagestyle.css" >
 </head>
 

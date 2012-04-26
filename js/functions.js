@@ -4,7 +4,8 @@ var query_id = 0;
 var session_id=0;
 
 
-var count = 1;
+var unique_count = 0;
+
 $(document).ready(function(){
     //More Link to expand the texts
     expand_text();
@@ -41,9 +42,25 @@ $('#sortable2').hover(function(){
 });
 
 //Change the class inside the blue box
-$('.basic').hover(function(){
-    $('#sortable1 div').attr('class','anything');
+$('#sortable2').sortable({
+    out: function() {
+	alert("aa");
+    }
 });
+
+//start(function(){
+///    alert("aaaaaaaaaa");
+//    $('#sortable1 div').attr('id','step_in_basic_plan'+unique_count);
+//    $('#sortable1 div').attr('class','editable');
+    //$('.step_in_basic_plan'+unique_count).editable(function(value, settings) { 
+//	$('.step_in_basic_plan'+unique_count).html = value;
+//	return(value);
+  //  }, { 
+//	type    : 'textarea',
+//	submit  : 'OK',
+  //  });
+//    unique_count++;
+//});
 
 $(function() {
     $.ajax({
@@ -74,11 +91,12 @@ $(function() {
         $('#add').hide();
     });
 });
+
 /* ajax*/
 //Create by Vahid
 $(function() {
     $("#addtranc").click(function() {
-		var ss="";
+	var ss="";
         var mytranc = new Array();
         var myid = new Array();
         var mystyle = new Array();
@@ -91,39 +109,39 @@ $(function() {
             mystyle[index] = $(this).attr("style");
             myclass[index] = $(this).attr("class");
         });
-          if(session_id==0){
-        	set_session(1);
-			ss="<div><input type='checkbox' checked='checked' style='float:left'  onclick='aaa("+session_id+")' id='"+session_id+"'/>&nbsp;&nbsp;";
-			ss=ss+"<h3 style='display:inline' id='h"+session_id+"'>"+$("#titletxt").val()+" </h3>";
-			ss=ss+'&nbsp;&nbsp;<a href="#" onclick="$(this).parent().remove()">remove</a></div>';
-		}else{
-			session_id=session_id+1;
-			var su = 1;
-			$.each(myid,function(name,value){
-			 ss=ss+'<div><input type="checkbox" checked="checked" class="'+myclass[name]+'" onclick="aaa('+value+')" style="'+mystyle[name]+'" id="'+value+'" />';
-			   ss=ss+'&nbsp;&nbsp;<h3 style="display:inline" id="h'+value+'">'+mytranc[name]+'</h3>&nbsp;&nbsp;<a href="#" onclick="$(this).parent().remove()">remove</a><br />';
-			  	
-			   if($("#pre").is(':checked')){
-				   var id="h"+value;
-				   if(($("#selectpre").val())==id){
-					 ss=ss+'<input type="checkbox" checked="checked" class="'+value+'" onclick="aaa('+session_id+')" style="float:left;margin-left:20px" id="'+session_id+'" /><h3 id="h'+session_id+'">'+$("#titletxt").val()+'</h3>';
-					 su=0;  
-				   }else{su = 1;}
-			   }
-			});
-			if(su==1){
-			ss=ss+"<br /><input type='checkbox' checked='checked' style='float:left' onclick='aaa("+session_id+")' id='"+session_id+"'/>&nbsp;&nbsp;";
-			ss=ss+"<h3 style='display:inline' id='h"+session_id+"'>"+$("#titletxt").val()+" </h3>";
-			ss=ss+'&nbsp;&nbsp;<a href="#" onclick="$(this).parent().remove()">remove</a></div>';	
-			}
+        if(session_id==0){
+            set_session(1);
+	    ss="<div><input type='checkbox' checked='checked' style='float:left'  onclick='aaa("+session_id+")' id='"+session_id+"'/>&nbsp;&nbsp;";
+	    ss=ss+"<h3 style='display:inline' id='h"+session_id+"'>"+$("#titletxt").val()+" </h3>";
+	    ss=ss+'&nbsp;&nbsp;<a href="#" onclick="$(this).parent().remove()">remove</a></div>';
+	}else{
+	    session_id=session_id+1;
+	    var su = 1;
+	    $.each(myid,function(name,value){
+		ss=ss+'<div><input type="checkbox" checked="checked" class="'+myclass[name]+'" onclick="aaa('+value+')" style="'+mystyle[name]+'" id="'+value+'" />';
+		ss=ss+'&nbsp;&nbsp;<h3 style="display:inline" id="h'+value+'">'+mytranc[name]+'</h3>&nbsp;&nbsp;<a href="#" onclick="$(this).parent().remove()">remove</a><br />';
+		
+		if($("#pre").is(':checked')){
+		    var id="h"+value;
+		    if(($("#selectpre").val())==id){
+			ss=ss+'<input type="checkbox" checked="checked" class="'+value+'" onclick="aaa('+session_id+')" style="float:left;margin-left:20px" id="'+session_id+'" /><h3 id="h'+session_id+'">'+$("#titletxt").val()+'</h3>';
+			su=0;  
+		    }else{su = 1;}
 		}
+	    });
+	    if(su==1){
+		ss=ss+"<br /><input type='checkbox' checked='checked' style='float:left' onclick='aaa("+session_id+")' id='"+session_id+"'/>&nbsp;&nbsp;";
+		ss=ss+"<h3 style='display:inline' id='h"+session_id+"'>"+$("#titletxt").val()+" </h3>";
+		ss=ss+'&nbsp;&nbsp;<a href="#" onclick="$(this).parent().remove()">remove</a></div>';	
+	    }
+	}
         var dataString = $("#form1").serialize() + "&mytranc=" + mytranc + "&myid=" + myid+ "&mystyle=" + mystyle+ "&myclass=" + myclass;
 		
-                    $('#tranc').html(ss);
-                    $("#toggle").hide();
-                    $('#selectpre option').remove();
-                   $('#step span').html("<br />");
-                    $("#step").fadeIn(1500, function() {});
+        $('#tranc').html(ss);
+        $("#toggle").hide();
+        $('#selectpre option').remove();
+        $('#step span').html("<br />");
+        $("#step").fadeIn(1500, function() {});
         $('#titletxt').val("");
         return false;
     });
